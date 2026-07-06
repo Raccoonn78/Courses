@@ -171,6 +171,7 @@ with open(filename, "a", encoding="utf-8") as f:
 # РАБОТА С JSON-ФАЙЛАМИ
 import json
 
+
 data = {
     "name": "Алексей",
     "age": 25,

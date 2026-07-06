@@ -18,7 +18,7 @@
 
 print("=== Создание словаря ===")
 
-empty = {}
+empty_d:dict = {} #  dict() - dictionary
 person = {
     "name": "Алексей",
     "age": 25,
@@ -42,7 +42,7 @@ print("\n=== Доступ ===")
 print(person["name"])          # Алексей — по ключу
 # person["phone"]              # KeyError если ключа нет!
 
-# Безопасный доступ через get()
+# Безопасный доступ через get() # получить значение по указанному ключу, если ключа нет — вернёт None (или значение по умолчанию)
 print(person.get("age"))       # 25
 print(person.get("phone"))     # None — не упадёт с ошибкой
 print(person.get("phone", "не указан"))  # "не указан" — значение по умолчанию

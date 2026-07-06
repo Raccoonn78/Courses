@@ -48,14 +48,16 @@ print(list(squares_gen(6)))    # [0, 1, 4, 9, 16, 25]
 
 
 # Генератор бесконечной последовательности (fibonacci)
-def fibonacci():
+from collections.abc import Generator
+
+def fibonacci()->Generator[int, None, None]:
     a, b = 0, 1
     while True:          # бесконечный цикл — но память не кончится!
         yield a
         a, b = b, a + b
 
-fib = fibonacci()
-print([next(fib) for _ in range(10)])    # первые 10 чисел Фибоначчи
+fib_1: Generator[int, None, None] = fibonacci() # 
+print([next(fib_1) for _ in range(10)])    # 
 
 
 # ------------------------------------------------------------

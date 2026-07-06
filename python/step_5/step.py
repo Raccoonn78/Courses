@@ -13,12 +13,13 @@
 # ------------------------------------------------------------
 # 1. ЦИКЛ WHILE — повторяет блок, пока условие True
 # ------------------------------------------------------------
-print("=== while ===")
+print("=== while ===") # пока 
 
 count = 0
 while count < 5:
     print(f"count = {count}")
     count += 1          # ОБЯЗАТЕЛЬНО изменять условие, иначе бесконечный цикл!
+
 
 print("Цикл завершён\n")
 
@@ -39,7 +40,7 @@ print("\n=== for ===")
 # range(start, stop)    → start, ..., stop-1
 # range(start, stop, step)
 
-for i in range(5):
+for i in range(5): ## range(0, 5). -> 0,1,2,3,4
     print(i, end=" ")   # end=" " — печать в одну строку
 print()
 
@@ -56,7 +57,7 @@ for i in range(10, 0, -2):  # обратный отсчёт
 print()
 
 # for по строке — перебирает символы
-for char in "Python":
+for char in "Python": # строка это иттерируемый объект
     print(char, end="-")
 print()
 
